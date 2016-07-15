@@ -3,7 +3,9 @@
         open Xunit
         open FsUnit.Xunit
         open Cube
-        open R1.MoveSets
+        open MoveSets
+        open Scrambler
+        open Search
 
         [<Fact>]
         let ``Solved cube has 12 edges`` () =
@@ -77,3 +79,25 @@
         [<Fact>]
         let ``Moveset 'all' should have 18 available turns.`` () =
             MoveSets.MoveSets.All |> List.length |> should equal 18 
+
+        [<Fact>]
+        let ``Scrambles should result in a scrambled cube...`` () =
+            Scramble solvedCube MoveSets.All 25 |> should not' (equal solvedCube)
+
+//        [<Fact>]
+//        let ``Scrambles should not have repeated moves.`` () =
+//            1 |> should equal 2 
+//            (*
+//                not sure how to write this test.
+//                basically want to prevent things like [L L] or [L L2] or [L R' L2]
+//            *)
+
+        [<Fact>]
+//        let ``Scrambled cube should be solvable`` () =
+            let depth = 3
+//
+//            let scrambledCube = Scramble solvedCube MoveSets.All depth
+//            let actualCube = fst scrambledCube
+
+//            let response =  IDASearch actualCube depth Movesets.MoveSets.All
+////            (response |> List.length) > 0 |> should equal true

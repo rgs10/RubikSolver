@@ -58,15 +58,18 @@
     <None Include="App.config" />
     <Compile Include="Cube.fs" />
     <Compile Include="MoveSets.fs" />
-    <Compile Include="Tests.fs" />
     <Compile Include="Program.fs" />
     <Content Include="packages.config" />
+    <Compile Include="Scrambler.fs" />
+    <Compile Include="Search.fs" />
+    <Compile Include="Tests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
       <HintPath>..\packages\FSharp.Core.3.1.2.5\lib\net40\FSharp.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FSharp.Data.TypeProviders" />
     <Reference Include="FsUnit.Xunit">
       <HintPath>..\packages\FsUnit.xUnit.1.4.1.0\lib\net45\FsUnit.Xunit.dll</HintPath>
       <Private>True</Private>
@@ -78,6 +81,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Numerics" />
     <Reference Include="xunit.abstractions">
       <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
